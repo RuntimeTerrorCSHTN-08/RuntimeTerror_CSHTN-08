@@ -54,14 +54,14 @@ nav ul li a {
 	text-decoration: none;
 }
 nav ul li a:hover {
-	color: #9097f5;
+	color: white;
 	border-radius: 5px;
-	background: #fdd05b;
+	background: #616bf1;
 }
 .active {
-	color: #9097f5;
+	color: white;
 	border-radius: 5px;
-	background: #fdd05b;
+	background: #616bf1;
 }
 .srch {
 	padding: 2px 10px;
@@ -168,7 +168,8 @@ a, button {
 .side-menu {
 	width: 100%;
 	height: 100%;
-	background: #616bf1;
+	color: black;
+	background: white;
 	position: absolute;
 	top: 0;
 	transition: .8s;
@@ -176,10 +177,11 @@ a, button {
 	transform: translateX(-100%);
 }
 .side-menu ul {
-	margin-top: 25%;
+	margin-top: 15%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	/* background: #FA4B37; */
 }
 .side-menu ul li {
@@ -192,10 +194,10 @@ a, button {
 	/* padding: 10px 0px; */
 }
 .side-menu ul li:hover a{
-	color: black;
+	color: #ff5557;
 }
 .side-menu ul li a{
-	color: #FFF;
+	color: black;
 	width: 100%;
 	font-size: 1em;
 	/* background: #2E3D49; */
@@ -215,10 +217,11 @@ a, button {
 	margin-top: 10%;
 }
 .user img {
-	width: 60px;
-	border-radius: 50%;
-	border: 2px solid #fff;
-	margin-right: 30px;
+	justify-content: center;
+	align-items: center;
+	width: 25%;
+	height: 25%;
+	margin-left: 15%;
 	cursor: pointer;
 }
 .user p {
@@ -777,6 +780,7 @@ footer {
 	color: #E5E8EF;
 	background: #000D;
 	padding: 50px 0; 
+	margin-top: 250px ;
 }
 footer .footer-container {
 	max-width: 1300px;

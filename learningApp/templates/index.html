@@ -1,135 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="static/css/style.css" />
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <script>
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("black");
+        } else {
+          $("nav").removeClass("black");
+        }
+      });
+    </script>
+    <script type="text/javascript" src="static/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
-  <script>
-    $(window).on("scroll", function () {
-      if ($(window).scrollTop()) {
-        $("nav").addClass("black");
-      } else {
-        $("nav").removeClass("black");
-      }
-    });
-  </script>
-  <script type="text/javascript" src="static/js/script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <title>eLearn</title>
+    {% block title %} {% endblock title %}
+  </head>
 
-  <title>eLearn</title>
-  {% block title %} {% endblock title %}
-</head>
+  <body>
+    <!-- <h1>Hello, Hackathon Codestrom</h1> -->
 
-<body>
-  <!-- <h1>Hello, Hackathon Codestrom</h1> -->
-
-  <!-- Navbar -->
-  <header id="header">
-    <nav class="black">
-      <div class="logo"><img src="static/images/logo.jpeg" alt="logo" /></div>
-      <ul>
-        <li><a class="active" href="">Home</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#team_section">Team</a></li>
-        <li><a href="#contactus_section">Contact</a></li>
-      </ul>
-      <a class="get-started" href="login.html">Get Started</a>
-      <img src="static/images/menu.png" class="menu" onclick="sideMenu(0)" alt="menu" />
-    </nav>
-    {% if messages %} {% for message in messages %}
-    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-      {{ message }}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    {% endfor %} {% endif %} {% block landing %} {% endblock landing %}
-
-    <div class="side-menu" id="side-menu">
-      <div class="close" onclick="sideMenu(1)">
-        <img src="static/images/menu-unchecked.png" alt="" />
+    <!-- Navbar -->
+    <header id="header">
+      <nav class="black">
+        <div class="logo"><img src="static/images/logo.jpeg" alt="logo" /></div>
+        <ul>
+          <li><a class="active" href="">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#team_section">Team</a></li>
+          <li><a href="#contactus_section">Contact</a></li>
+        </ul>
+        <a class="get-started" href="login.html">Get Started</a>
+        <img
+          src="static/images/menu.png"
+          class="menu"
+          onclick="sideMenu(0)"
+          alt="menu"
+        />
+      </nav>
+      {% if messages %} {% for message in messages %}
+      <div
+        class="alert alert-{{ message.tags }} alert-dismissible fade show"
+        role="alert"
+      >
+        {{ message }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
       </div>
-      <div class="user">
-        <img src="static/images/logo.jpeg" alt="Username" />
-        <p>StackUp</p>
-      </div>
-      <ul>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#team_section">Team</a></li>
-        <li><a href="#about_section">About</a></li>
-        <li><a href="#Contact">Contact us</a></li>
-      </ul>
-      <div class="loginbtn">
-        <a class="lgnbtn" href="login.html">Get Started</a>
-      </div>
-    </div>
-  </header>
+      {% endfor %} {% endif %} {% block landing %} {% endblock landing %}
 
-  <!-- yeh neeche joh hai uska heading kya hai? -->
-
-  {% block courses %} {% endblock courses %}
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-      <div class="left-col">
-        <img src="static/images/logo.jpeg" style="width: 200px" />
-        <div class="logo"></div>
-        <div class="social-media">
-          <a href="#"><img src="static/images/fb.png" /></a>
-          <a href="#"><img src="static/images/insta.png" /></a>
-          <a href="#"><img src="static/images/tt.png" /></a>
-          <a href="#"><img src="static/images/ytube.png" /></a>
-          <a href="#"><img src="static/images/linkedin.png" /></a>
+      <div class="side-menu" id="side-menu">
+        <div class="close" onclick="sideMenu(1)">
+          <img src="static/images/menu-unchecked.png" alt="" />
         </div>
-        <br /><br />
-        <p class="rights-text">
-          Copyright © 2021 Created By Roshan Kumar, Abhishek Dulat All Rights
-          Reserved.
-        </p>
-        <br />
-        <p>
-          <img src="static/images/location.png" /> Lovely Professional
-          University<br />Phagwara, Punjab-144401
-        </p>
-        <br />
-        <p>
-          <img src="static/images/phone.png" /> +91-1234-567-890<br /><img src="static/images/mail.png" />&nbsp;
-          learnedonline9419@gmail.com
-        </p>
+        <div class="user">
+          <img src="static/images/logo.jpeg" alt="Username" />
+        </div>
+        <ul>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#team_section">Team</a></li>
+          <li><a href="#about_section">About</a></li>
+          <li><a href="#Contact">Contact us</a></li>
+        </ul>
       </div>
-      <div class="right-col">
-        <h1 style="color: #fff">Our Newsletter</h1>
-        <div class="border"></div>
-        <br />
-        <p>Enter Your Email to get our News and updates.</p>
-        <form class="newsletter-form">
-          <input class="txtb" type="email" placeholder="Enter Your Email" />
-          <input class="btn" type="submit" value="Submit" />
-        </form>
+    </header>
+
+    <!-- yeh neeche joh hai uska heading kya hai? -->
+
+    {% block courses %} {% endblock courses %}
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <div class="left-col">
+          <img src="static/images/logo2.png" style="width: 200px" />
+          <div class="logo"></div>
+          <div class="social-media">
+            <a href="#"><img src="static/images/fb.png" /></a>
+            <a href="#"><img src="static/images/insta.png" /></a>
+            <a href="#"><img src="static/images/tt.png" /></a>
+            <a href="#"><img src="static/images/ytube.png" /></a>
+            <a href="#"><img src="static/images/linkedin.png" /></a>
+          </div>
+          <br /><br />
+          <p class="rights-text">
+            Copyright © 2021 Created By Runtime Terrors. All Rights Reserved.
+          </p>
+          <br />
+          <p>
+            <a
+              href="https://www.bing.com/maps?osid=d62aac21-b805-4777-9c14-145573d8f819&cp=19.065119~72.830479&lvl=16&imgid=828c81c6-a000-4ab0-ac5d-4c9b8cee3fd8&v=2&sV=2&form=S00027" target="_blank"
+            >
+              <img src="static/images/location.png" />
+            </a>
+            <br /> 
+            <p>
+              Thadomal Shahani Engineering College <br />
+              Mumbai, India.
+            </p>
+
+
+          <br />
+          <p>
+            <img src="static/images/phone.png" /> +91-1234-567-890<br /><img
+              src="static/images/mail.png"
+            />&nbsp; stack.up@gmail.com
+          </p>
+        </div>
+        <div class="right-col">
+          <h1 style="color: #fff">Our Newsletter</h1>
+          <div class="border"></div>
+
+          <br />
+          <p>Enter Your Email to get our News and updates.</p>
+          <form class="newsletter-form">
+            <input class="txtb" type="email" placeholder="Enter Your Email" />
+            <input class="btn" type="submit" value="Submit" />
+          </form>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Optional JavaScript; choose one of the two! -->
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-    integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
-    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
-    crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
