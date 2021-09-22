@@ -90,13 +90,13 @@ nav ul li a:hover {
 	text-decoration: none;
 	
 	transition: .5s;
-	background-color: #fff;
-	color: #2e2e2e;
+	background-color: #616bf1;
+	color: white;
 }
 .get-started:hover {
 	border: 1px solid #616bf1;
-	color: #fff;
-	background-color: #616bf1;
+	color: black;
+	background-color: white;
 }
 .logo img{
 	height: 50px;
