@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 # Create your views here.
 def index(request):
   messages.success(request, "This is a test Message!!")
-  return render(request,"index.html")
+  return render(request,"landing.html")
 
 def handleSignup(request):
   if request.method == "POST":
