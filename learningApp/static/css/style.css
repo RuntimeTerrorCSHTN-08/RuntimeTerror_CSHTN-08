@@ -16,9 +16,8 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-header {
-	/* height: 90vh; */
-	/* background: #000; */
+header{
+	height: 90vh;
 }
 .black {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -55,14 +54,14 @@ nav ul li a {
 	text-decoration: none;
 }
 nav ul li a:hover {
-	color: #fff;
+	color: #9097f5;
 	border-radius: 5px;
-	background: #DF2771;
+	background: #fdd05b;
 }
 .active {
-	color: #fff;
+	color: #9097f5;
 	border-radius: 5px;
-	background: #DF2771;
+	background: #fdd05b;
 }
 .srch {
 	padding: 2px 10px;
@@ -87,17 +86,17 @@ nav ul li a:hover {
 .get-started {
 	margin-left: 50px;
 	padding: 5px 20px;
-	border: 2px solid #DF2771;
 	border-radius: 20px;
 	text-decoration: none;
 	
 	transition: .5s;
-	background-color: #DF2771;
-	color: #fff;
+	background-color: #fff;
+	color: #2e2e2e;
 }
 .get-started:hover {
-	color: #2e2e2e;
-	background: #fff;
+	border: 1px solid #616bf1;
+	color: #fff;
+	background-color: #616bf1;
 }
 .logo img{
 	height: 50px;
@@ -117,7 +116,7 @@ a, button {
 	text-align: center;
 }
 .head-container {
-	margin-top: 245px;
+	margin-top: 130px;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -154,9 +153,10 @@ a, button {
 	color: rgba(0, 0, 0, 0.8);
 	cursor: pointer;
 }
-.svg-image img{
+.intro-image img{
 	width: 500px;
-	filter: drop-shadow(0 20px 10px rgba(0,0,0,0.2));
+	/* filter: drop-shadow(10px 15px 10px rgba(0,0,0,0.2)); */
+	padding-bottom: 50px;
 }
 
 /* SIDE MENU */
@@ -168,7 +168,7 @@ a, button {
 .side-menu {
 	width: 100%;
 	height: 100%;
-	background: rgba(182, 33, 90, 0.993);
+	background: #616bf1;
 	position: absolute;
 	top: 0;
 	transition: .8s;
@@ -176,7 +176,7 @@ a, button {
 	transform: translateX(-100%);
 }
 .side-menu ul {
-	margin-top: 35%;
+	margin-top: 25%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -192,8 +192,7 @@ a, button {
 	/* padding: 10px 0px; */
 }
 .side-menu ul li:hover a{
-	background: #fff;
-	color: #DF2771;
+	color: black;
 }
 .side-menu ul li a{
 	color: #FFF;
@@ -219,7 +218,6 @@ a, button {
 	width: 60px;
 	border-radius: 50%;
 	border: 2px solid #fff;
-	filter: drop-shadow(0 10px 20px #0004);
 	margin-right: 30px;
 	cursor: pointer;
 }
