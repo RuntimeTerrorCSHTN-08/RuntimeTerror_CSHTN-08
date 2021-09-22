@@ -5,12 +5,22 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="static/css/style.css">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
 
-  <link rel="stylesheet" type="text/css" href="learningApp\static\style.css" />
+    <script>
+      $(window).on('scroll', function(){
+          if($(window).scrollTop()){
+            $('nav').addClass('black');
+          }else {
+          $('nav').removeClass('black');
+        }
+      })
+    </script>
+  <script type="text/javascript" src="static/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
   <title>eLearn</title>
 </head>
@@ -20,8 +30,8 @@
 
   <!-- Navbar -->
   <header id="header">
-    <nav>
-      <div class="logo"><img src="images/icon/logo.png" alt="logo" /></div>
+    <nav class="black">
+      <div class="logo"><img src="static/images/logo.jpeg" alt="logo" /></div>
       <ul>
         <li><a class="active" href="">Home</a></li>
         <li><a href="#portfolio_section">Portfolio</a></li>
@@ -29,12 +39,8 @@
         <li><a href="#services_section">Services</a></li>
         <li><a href="#contactus_section">Contact</a></li>
       </ul>
-      <div class="srch">
-        <input type="text" class="search" placeholder="Search here..." /><img src="images/icon/search.png" alt="search"
-          onclick="slide()" />
-      </div>
       <a class="get-started" href="login.html">Get Started</a>
-      <img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu" />
+      <img src="static/images/menu.png" class="menu" onclick="sideMenu(0)" alt="menu" />
     </nav>
     <div class="head-container">
       <div class="svg-image">
@@ -43,7 +49,7 @@
     </div>
     <div class="side-menu" id="side-menu">
       <div class="close" onclick="sideMenu(1)">
-        <img src="images/icon/close.png" alt="" />
+        <img src="static/images/menu-unchecked.png" alt="" />
       </div>
       <div class="user">
         <img src="images/creator/roshan.jpeg" alt="Username" />
@@ -61,13 +67,13 @@
   </header>
 
   <!-- yeh neeche joh hai uska heading kya hai? -->
-  {% if messages %} 
+  {% if messages %}
   {% for message in messages %}
   <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
     {{ message }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
-  {% endfor %} 
+  {% endfor %}
   {% endif %}
 
   <!-- Optional JavaScript; choose one of the two! -->
