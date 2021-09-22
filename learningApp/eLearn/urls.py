@@ -5,6 +5,7 @@ from eLearn import views
 urlpatterns = [
     path("",views.index,name = 'home'),
     path("signup",views.handleSignup,name = 'handleSignup'),
+    path("courses",views.courses,name = 'courses'),
     path("login",views.handleLogin,name = 'handleLogin'),
     path("logout",views.handleLogout,name = 'handleLogout')
     

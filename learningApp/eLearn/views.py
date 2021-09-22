@@ -8,6 +8,9 @@ def index(request):
   messages.success(request, "This is a test Message!!")
   return render(request,"landing.html")
 
+def courses(request):
+  return render(request,"courses.html")
+
 def handleSignup(request):
   if request.method == "POST":
     #GET THE POST PARAMETERS
