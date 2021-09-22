@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def index(request):
-  messages.success(request, "This is a test Message!!")
+  # messages.success(request, "This is a test Message!!")
   return render(request,"landing.html")
 
 def courses(request):
@@ -15,7 +15,7 @@ def handleSignup(request):
   if request.method == "POST":
     #GET THE POST PARAMETERS
     username = request.POST['username']
-    fullname = request.POST['fullname']
+    fname = request.POST['fname']
     email = request.POST['email']
     pass1 = request.POST['pass1']
     pass2 = request.POST['pass2']
@@ -35,7 +35,7 @@ def handleSignup(request):
 
     # Create the user
     myuser = User.objects.create_user(username, email, pass1)
-    myuser.first_name = fullname
+    myuser.first_name = fname
     myuser.save()
     messages.success(request, "Your Skill Dev account has been successfully created!!")
     return redirect('home')
