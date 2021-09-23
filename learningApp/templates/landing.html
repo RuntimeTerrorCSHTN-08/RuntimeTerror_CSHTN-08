@@ -64,6 +64,54 @@
 </div>
 
 
+{% if user.is_authenticated %}
+<div class="team-section" id="team-navigation">
+  <br /> <br /> <br /> <br />
+  <div class="section-name">
+    <h1 align="center">StackUp Online Resources</h1>
+  </div>
+
+  <div class="card-container">
+    <div class="teams-flip-card">
+      <div class="teams-flip-card-inner">
+        <div class="teams-flip-card-front">
+          <h1>Quizzes</h1>
+          <p>HackerRank competitions</p>
+          <img src="/static/images/harry.jfif" alt="Avatar" style="width:250px;height:250px;  border-radius: 50px;">
+        </div>
+      </div>
+    </div>
+    <div class="teams-flip-card">
+      <div class="teams-flip-card-inner">
+        <div class="teams-flip-card-front">
+          <h1>Assignments</h1>
+          <p>Assignment related content</p>
+          <img src="/static/images/aman_Dhattarwal.jfif" alt="Avatar"
+            style="width:250px;height:250px; border-radius: 50px;">
+        </div>
+      </div>
+    </div>
+    <div class="teams-flip-card">
+      <div class="teams-flip-card-inner">
+        <div class="teams-flip-card-front">
+          <h1>CS <br> Dojo</h1>
+          <p>Back-end Developer</p>
+          <img src="static\images\cs_dojo.jfif" alt="Avatar" style="width:250px;height:250px;  border-radius: 50px;">
+        </div>
+      </div>
+    </div>
+    <div class="teams-flip-card">
+      <div class="teams-flip-card-inner">
+        <div class="teams-flip-card-front">
+          <h1>CS <br> Dojo</h1>
+          <p>Back-end Developer</p>
+          <img src="static\images\cs_dojo.jfif" alt="Avatar" style="width:250px;height:250px;  border-radius: 50px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% else %}
 <div class="team-section" id="team-navigation">
   <br /> <br /> <br /> <br />
   <div class="section-name">
@@ -101,5 +149,7 @@
     </div>
   </div>
 </div>
+{% endif %}
+
 
 {% endblock landing %}

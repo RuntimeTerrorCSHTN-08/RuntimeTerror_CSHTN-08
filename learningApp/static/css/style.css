@@ -112,6 +112,12 @@ nav ul li a:hover {
 	margin-top: 5px;
 }
 
+.quiz-btn{
+	margin-left: 500px;
+	margin-top: 50px;
+	height: 35px;
+}
+
 a, button {
 	float: left;
 	font-family: "Montserrat", sans-serif;

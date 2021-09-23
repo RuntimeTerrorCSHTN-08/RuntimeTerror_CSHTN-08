@@ -37,7 +37,12 @@
       <ul>
         <li><a class="active" href="/">Home</a></li>
         <li><a href="#course-navigation">Courses</a></li>
-        <li><a href="#team-navigation">Team</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="#team-navigation">Online Help</a></li>
+        {% else %}
+          <li><a href="#team-navigation">Team</a></li>
+        {% endif %}
+        
         <li><a href="#footer-navigation">Contact</a></li>
       </ul>
       <!-- Button trigger modal -->
