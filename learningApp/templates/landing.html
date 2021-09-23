@@ -20,36 +20,43 @@
     <div class="courseland-flip-card">
       <div class="courseland-flip-card-inner">
         <div class="courseland-flip-card-front">
-          <img src="/static/images/frontend-landing.jpg" alt="Avatar" style="width:300px;height:300px;">
-        </div>
-        <div class="courseland-flip-card-back">
-          <h1>John Doe</h1>
-          <p>Architect & Engineer</p>
-          <p>We love that guy</p>
-        </div>
-      </div>
-    </div>
-    <div class="courseland-flip-card">
-      <div class="courseland-flip-card-inner">
-        <div class="courseland-flip-card-front">
-          <img src="/static/images/backend-landing.jpg" alt="Avatar" style="width:300px;height:300px;">
-        </div>
-        <div class="courseland-flip-card-back">
-          <h1>John Doe</h1>
-          <p>Architect & Engineer</p>
-          <p>We love that guy</p>
+          {% if user.is_authenticated %}
+          <a href="/courses">
+            <img src="/static/images/frontend-landing.jpg" alt="Avatar" style="width:300px;height:300px;">
+          </a>
+          {% else %}
+          <img src="/static/images/frontend-landing.jpg" alt="Avatar" style="width:300px;height:300px;"
+            data-bs-toggle="modal" data-bs-target="#loginModel">
+          {% endif %}
         </div>
       </div>
     </div>
     <div class="courseland-flip-card">
       <div class="courseland-flip-card-inner">
         <div class="courseland-flip-card-front">
-          <img src="/static/images/database-landing.jpg" alt="Avatar" style="width:300px;height:300px;">
+          {% if user.is_authenticated %}
+          <a href="/courses">
+            <img src="/static/images/backend-landing.jpg" alt="Avatar" style="width:300px;height:300px;">
+          </a>
+          {% else %}
+          <img src="/static/images/backend-landing.jpg" alt="Avatar" style="width:300px;height:300px;"
+            data-bs-toggle="modal" data-bs-target="#loginModel">
+          {% endif %}
+
         </div>
-        <div class="courseland-flip-card-back">
-          <h1>John Doe</h1>
-          <p>Architect & Engineer</p>
-          <p>We love that guy</p>
+      </div>
+    </div>
+    <div class="courseland-flip-card">
+      <div class="courseland-flip-card-inner">
+        <div class="courseland-flip-card-front">
+          {% if user.is_authenticated %}
+          <a href="/courses">
+            <img src="/static/images/database-landing.jpg" alt="Avatar" style="width:300px;height:300px;">
+          </a>
+          {% else %}
+          <img src="/static/images/database-landing.jpg" alt="Avatar" style="width:300px;height:300px;"
+            data-bs-toggle="modal" data-bs-target="#loginModel">
+          {% endif %}
         </div>
       </div>
     </div>
@@ -60,7 +67,7 @@
 <div class="team-section" id="team-navigation">
   <br /> <br /> <br /> <br />
   <div class="section-name">
-    <h1 align= "center">StackUp's Amazing Team</h1>
+    <h1 align="center">StackUp's Amazing Team</h1>
   </div>
 
   <div class="card-container">
@@ -78,7 +85,8 @@
         <div class="teams-flip-card-front">
           <h1>Aman Dhattarwal</h1>
           <p>Front-end Developer</p>
-          <img src="/static/images/aman_Dhattarwal.jfif" alt="Avatar" style="width:250px;height:250px; border-radius: 50px;">
+          <img src="/static/images/aman_Dhattarwal.jfif" alt="Avatar"
+            style="width:250px;height:250px; border-radius: 50px;">
         </div>
       </div>
     </div>
