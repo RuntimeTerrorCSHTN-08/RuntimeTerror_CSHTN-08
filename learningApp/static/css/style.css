@@ -161,6 +161,19 @@ a, button {
 	padding-bottom: 50px;
 }
 
+/* Login modal */
+#loginModel{
+	color: black
+}
+
+.modal-title{
+	justify-content: center;
+}
+
+.subbtn{
+	margin-left: 80px;
+}
+
 /* SIDE MENU */
 .menu {
 	cursor: pointer;
