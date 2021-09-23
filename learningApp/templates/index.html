@@ -93,7 +93,7 @@
               <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control" id="username" name="username"
-                  placeholder="Choose a unique username" required>
+                  placeholder="Choose a unique username" maxlength="10" required>
               </div>
               <div class="mb-3">
                 <label for="fname" class="form-label">Firstname</label>
@@ -108,7 +108,7 @@
               <div class="mb-3">
                 <label for="pass1" class="form-label">Password</label>
                 <input type="password" class="form-control" id="pass1" name="pass1" required
-                  placeholder="Choose your password">
+                  placeholder="Choose your password" pattern="^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$" title="Minlength should be 6 character and it should be alphanumberic only" maxlength="13" minlength="6">
               </div>
               <div class="mb-3">
                 <label for="pass2" class="form-label"> Confirm Password</label>
