@@ -175,7 +175,11 @@
       </div>
       <ul>
         <li><a href="#course-navigation">Courses</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="#team-navigation">Online Navigation</a></li>
+        {% else %}
         <li><a href="#team-navigation">Team</a></li>
+        {% endif %}
         <li><a href="#footer-navigation">Contact us</a></li>
       </ul>
     </div>
