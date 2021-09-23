@@ -244,6 +244,23 @@ a, button {
 	position: relative;
 }
 
+/* courses-container-frontend */
+.course-front-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 100px;
+}
+
+.playlist{
+	display: flex; 
+}
+
+.vid{
+	
+}
+
 
 /* Courses-container */
 .course-container{
