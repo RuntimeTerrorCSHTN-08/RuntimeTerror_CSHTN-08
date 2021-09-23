@@ -38,7 +38,7 @@
         <li><a class="active" href="/">Home</a></li>
         <li><a href="#course-navigation">Courses</a></li>
         {% if user.is_authenticated %}
-          <li><a href="#team-navigation">Online Help</a></li>
+          <li><a href="#team-navigation">Helpfull Resources</a></li>
         {% else %}
           <li><a href="#team-navigation">Team</a></li>
         {% endif %}
@@ -54,14 +54,7 @@
       </div>
 
       {% else %}
-      <!-- Button to  trigger Login modal -->
       <div>
-        <!-- <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#loginModel">
-      Login
-    </button> -->
-        <!-- <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#signupModel">
-    Get Started
-  </button> -->
         <a class="get-started" href="#" data-bs-toggle="modal" data-bs-target="#loginModel">Get Started</a>
       </div>
       {% endif %}
@@ -132,7 +125,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="loginModel" align="center" style="margin-left:190px;">Login</h5>
+            <h5 class="modal-title" id="loginModel" text-align="center" style="margin-left:190px;">Login</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
