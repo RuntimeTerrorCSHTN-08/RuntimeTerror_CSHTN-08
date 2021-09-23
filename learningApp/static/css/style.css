@@ -107,6 +107,11 @@ nav ul li a:hover {
 	transition: all 1s;
 }
 
+.logoutbtn{
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
 a, button {
 	float: left;
 	font-family: "Montserrat", sans-serif;
