@@ -36,6 +36,8 @@ nav {
 	align-items: center;
 
 }
+
+
 nav ul {
 	display: flex;
 	align-items: center;
@@ -306,11 +308,9 @@ a, button {
 
 /* Courses-container */
 .course-container{
-	position: fixed;
-	padding-top: 100px;
-	padding-left: 100px;
-	margin-top: 50px;
-	margin-left: 50px;
+	position: absolute;
+	top: 100px;
+	left: 100px;
 }
 .course-container h1{
 margin-top: 25px;
@@ -327,6 +327,8 @@ padding: 40px;
 	align-items: center;
 	justify-content: space-evenly;
 	margin-top: 10px;
+	top: 100px;
+	left: 100px;
 }
 .course-flip-card {
 	background-color: transparent;
@@ -345,11 +347,11 @@ padding: 40px;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
-  .course-flip-card:hover .flip-card-inner {
+  .course-flip-card:hover .course-flip-card-inner {
 	transform: rotateY(180deg);
   }
   
-  .course-flip-card-front, .flip-card-back {
+  .course-flip-card-front, .course-flip-card-back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -368,7 +370,6 @@ padding: 40px;
 	transform: rotateY(180deg);
   }
 
-
 .section-name{
 	display: flex;
 	align-items: center;
@@ -376,23 +377,28 @@ padding: 40px;
 	margin: 20px;
 }
 
-/* Courses Cards */
+/* Courses Cards - for landing page  */
+
+
+.team-section{
+	margin-top: 200px;
+} 
 
 .card-container{
 	background-color: transparent;
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	margin-top: 10px;
+	margin-top: 50px;
 }
-.flip-card {
+.courseland-flip-card {
 	background-color: transparent;
 	width: 300px;
 	height: 300px;
 	perspective: 1000px;
   }
   
-  .flip-card-inner {
+  .courseland-flip-card-inner {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -402,11 +408,12 @@ padding: 40px;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
-  .flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
+  .courseland-flip-card:hover .courseland-flip-card-inner {
+	transform: rotateY(30deg);
+	/* transform: rotateY(-30deg); if mouse on left side of image*/
   }
   
-  .flip-card-front, .flip-card-back {
+  .courseland-flip-card-front, .courseland-flip-card-back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -414,12 +421,54 @@ padding: 40px;
 	backface-visibility: hidden;
   }
   
-  .flip-card-front {
+  .courseland-flip-card-front {
 	background-color: #bbb;
 	color: black;
   }
   
-  .flip-card-back {
+  .courseland-flip-card-back {
+	background-color: #2980b9;
+	color: white;
+	transform: rotateY(180deg);
+  }
+
+
+  /* Teams Cards - for landing page */
+  .teams-flip-card {
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	perspective: 1000px;
+  }
+  
+  .teams-flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .teams-flip-card:hover .teams-flip-card-inner {
+	transform: rotateY(30deg);
+  }
+  
+  .teams-flip-card-front, .teams-flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+  }
+  
+  .teams-flip-card-front {
+	background-color: white;
+	color: black;
+  }
+  
+  .teams-flip-card-back {
 	background-color: #2980b9;
 	color: white;
 	transform: rotateY(180deg);
@@ -579,3 +628,4 @@ footer .btn:hover {
 		width: 100%;
 	}
 }
+

@@ -22,15 +22,15 @@ def handleSignup(request):
 
     # Check for errorneous inputs
     if len(username) >10:
-      messages.error(request, "Username must be under 10 characters")
+      messages.warning(request, "Username must be under 10 characters")
       return redirect('home')
 
     if not username.isalnum():
-      messages.error(request, "Username should only contain letters and numbers")
+      messages.warning(request, "Username should only contain letters and numbers")
       return redirect('home')
 
     if (pass1 != pass2):
-      messages.error(request, "Password do not match")
+      messages.warning(request, "Password do not match")
       return redirect('home')
 
     # Create the user
@@ -53,7 +53,7 @@ def handleLogin(request):
       messages.success(request, "Successfully Logged In!!")
       return redirect('home')
     else:
-      messages.error(request, "Invalid Credentials, Please try again")
+      messages.warning(request, "Invalid Credentials, Please try again")
       return redirect('home')
   else:
     return HttpResponse('404 - NOT FOUND')
