@@ -21,11 +21,13 @@
       <div class="courseland-flip-card-inner">
         <div class="courseland-flip-card-front">
           {% if user.is_authenticated %}
+          <h1>Frontend</h1>
           <a href="/course_frontend">
-            <img src="/static/images/frontend-landing.jpg" alt="Avatar" style="width:300px;height:300px;">
+            <img src="/static/images/frontend-landing.jpg" alt="Avatar" style="width:250px;height:250px; border-radius: 50px; margin-left: 17px;">
           </a>
           {% else %}
-          <img src="/static/images/frontend-landing.jpg" alt="Avatar" style="width:300px;height:300px;"
+          <h1>Frontend</h1>
+          <img src="/static/images/frontend-landing.jpg" alt="Avatar" style="width:250px;height:250px; border-radius: 50px; margin-left: 17px;"
             data-bs-toggle="modal" data-bs-target="#loginModel">
           {% endif %}
         </div>
@@ -35,11 +37,13 @@
       <div class="courseland-flip-card-inner">
         <div class="courseland-flip-card-front">
           {% if user.is_authenticated %}
+          <h1>Backend</h1>
           <a href="/course_backend">
-            <img src="/static/images/backend-landing.jpg" alt="Avatar" style="width:300px;height:300px;">
+            <img src="/static/images/backend-landing.jpg" alt="Avatar" style="width:250px;height:250px; border-radius: 50px; margin-left: 17px;">
           </a>
           {% else %}
-          <img src="/static/images/backend-landing.jpg" alt="Avatar" style="width:300px;height:300px;"
+          <h1>Backend</h1>
+          <img src="/static/images/backend-landing.jpg" alt="Avatar" style="width:250px;height:250px; border-radius: 50px; margin-left: 17px;"
             data-bs-toggle="modal" data-bs-target="#loginModel">
           {% endif %}
 
@@ -50,11 +54,13 @@
       <div class="courseland-flip-card-inner">
         <div class="courseland-flip-card-front">
           {% if user.is_authenticated %}
+          <h1>Database</h1>
           <a href="/course_database">
-            <img src="/static/images/database-landing.jpg" alt="Avatar" style="width:300px;height:300px;">
+            <img src="/static/images/database-landing.jpg" alt="Avatar" style="width:250px;height:250px; border-radius: 50px; margin-left: 17px;">
           </a>
           {% else %}
-          <img src="/static/images/database-landing.jpg" alt="Avatar" style="width:300px;height:300px;"
+          <h1>Database</h1>
+          <img src="/static/images/database-landing.jpg" alt="Avatar" style="width:250px;height:250px; border-radius: 50px; margin-left: 17px;"
             data-bs-toggle="modal" data-bs-target="#loginModel">
           {% endif %}
         </div>

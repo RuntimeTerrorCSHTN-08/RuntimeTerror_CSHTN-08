@@ -14,7 +14,6 @@
 
   <script type="text/javascript" src="static/js/script.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
 
   <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
@@ -36,11 +35,11 @@
         <li><a class="active" href="/">Home</a></li>
         <li><a href="#course-navigation">Courses</a></li>
         {% if user.is_authenticated %}
-          <li><a href="#team-navigation">Helpful Resources</a></li>
+        <li><a href="#team-navigation">Helpful Resources</a></li>
         {% else %}
-          <li><a href="#team-navigation">Team</a></li>
+        <li><a href="#team-navigation">Team</a></li>
         {% endif %}
-        
+
         <li><a href="#footer-navigation">Contact</a></li>
       </ul>
       <!-- Button trigger modal -->
@@ -56,10 +55,6 @@
         <a class="get-started" href="#" data-bs-toggle="modal" data-bs-target="#loginModel">Get Started</a>
       </div>
       {% endif %}
-
-
-
-
       <img src="static/images/menu.png" class="menu" onclick="sideMenu(0)" alt="menu" />
     </nav>
     {% if messages %}
@@ -87,7 +82,8 @@
               <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control" id="username" name="username"
-                  placeholder="Choose a unique username" maxlength="10" title="Maximum 10 characters are allowed" required>
+                  placeholder="Choose a unique username" maxlength="10" title="Maximum 10 characters are allowed"
+                  required>
               </div>
               <div class="mb-3">
                 <label for="fname" class="form-label">Firstname</label>
@@ -102,7 +98,9 @@
               <div class="mb-3">
                 <label for="pass1" class="form-label">Password</label>
                 <input type="password" class="form-control" id="pass1" name="pass1" required
-                  placeholder="Choose your password" pattern="^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$" title="Minlength should be 6 character and it should be alphanumberic only" maxlength="13" minlength="6">
+                  placeholder="Choose your password" pattern="^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$"
+                  title="Minlength should be 6 character and it should be alphanumberic only" maxlength="13"
+                  minlength="6">
               </div>
               <div class="mb-3">
                 <label for="pass2" class="form-label"> Confirm Password</label>
@@ -147,7 +145,6 @@
               <a href="#" data-bs-toggle="modal" data-bs-target="#signupModel" style="margin-left:170px;">Register
                 here</a>
             </div>
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
           </div>
         </div>
       </div>
