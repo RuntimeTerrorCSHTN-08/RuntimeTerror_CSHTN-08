@@ -9,7 +9,6 @@ urlpatterns = [
     path("course_backend",views.course_backend,name = 'course_backend'),
     path("course_database",views.course_database,name = 'course_database'),
     path("login",views.handleLogin,name = 'handleLogin'),
-    path("logout",views.handleLogout,name = 'handleLogout')
-    
-    
+    path("logout",views.handleLogout,name = 'handleLogout'),
+    path("contact",views.handleContact,name="handleContact") 
 ]

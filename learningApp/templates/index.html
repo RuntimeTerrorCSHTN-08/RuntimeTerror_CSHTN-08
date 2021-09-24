@@ -222,9 +222,10 @@
 
         <br />
         <p>We are available 24x7.</p>
-        <form class="newsletter-form">
-          <input class="txtb" type="email" placeholder="Enter Your Email" />
-          <a href="mailto: nidnac2@gmail.com"><input class="btn" type="submit" value="Submit" /> </a>
+        <form class="newsletter-form" action="/contact" method="post">
+          {% csrf_token %}
+          <input name="sendEmail" class="txtb" type="email" placeholder="Enter Your Email" />
+          <a href="#"><input class="btn" type="submit" value="Submit" /> </a>
         </form>
       </div>
     </div>

@@ -2,6 +2,7 @@ from django.shortcuts import render,HttpResponse,redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate , login, logout
 from django.contrib.auth.models import User
+from django.core.mail import send_mail
 
 # Create your views here.
 def index(request):
@@ -66,5 +67,27 @@ def handleLogout(request):
   logout(request)
   messages.success(request, "Successfully Logged Out!!")
   return redirect('home')
+
+
+def handleContact(request):
+  if request.method == 'POST':
+    # send mail
+    message_email = request.POST['sendEmail']
+
+    # To send an email
+    send_mail(
+      'From - StackUp', #subject
+       message_email, #message
+       message_email, #from email
+       ['nidnac2@gmail.com'], #to email
+    )
+    
+    if message_email:
+      messages.success(request, "We recieved your email and will respond shortly...")
+    else: 
+      messages.warning(request, "Please enter an email-address")
+    return render(request, 'landing.html', {'message_email' : message_email})
+  else:
+    return render(request, 'landing.html', {})
 
 
