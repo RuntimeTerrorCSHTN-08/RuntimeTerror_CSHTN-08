@@ -1,0 +1,43 @@
+.intro-image img{
+    width: 300px;
+}
+
+.quote p {
+    font-size: 25px;
+    padding: 26px 26px 0px 26px;
+}
+
+.quote h5{
+    padding: 0px 26px;
+}
+
+.courses-section{
+	background: rgb(294,86,86);
+  }
+
+.courseland-flip-card {
+  margin: 10px 0px;
+}
+
+ul{
+    padding: 0;
+}
+
+.playlist{
+    flex-direction: column;
+}
+
+.vid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.iframe-vid{
+    width: 300px;
+}
+
+.course-front-container h1{
+    padding-left: 67px;
+}
