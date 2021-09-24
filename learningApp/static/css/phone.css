@@ -35,9 +35,27 @@ ul{
 }
 
 .iframe-vid{
-    width: 300px;
+    width: 275px;
 }
 
 .course-front-container h1{
     padding-left: 67px;
+}
+
+.subbtn{
+    margin-left: 138px;
+}
+
+.regbtn{
+    margin-left: 133px;
+}
+
+.course-head h1{
+    padding-left: 14px;
+    text-align: center;
+}
+
+.course-head p{
+    padding-left: 20px;
+    text-align: center;
 }
