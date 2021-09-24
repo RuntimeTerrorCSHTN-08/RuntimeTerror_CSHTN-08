@@ -8,8 +8,12 @@ def index(request):
   # messages.success(request, "This is a test Message!!")
   return render(request,"landing.html")
 
-def courses(request):
-  return render(request,"courses.html")
+def course_frontend(request):
+  return render(request,"course_frontend.html")
+def course_backend(request):
+  return render(request,"course_backend.html")
+def course_database(request):
+  return render(request,"course_database.html")
 
 def handleSignup(request):
   if request.method == "POST":
