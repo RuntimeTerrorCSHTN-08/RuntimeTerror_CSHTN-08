@@ -1,4 +1,45 @@
 {% extends 'index.html' %}
+
+{% block title %}
+| - Frontend
+{% endblock title %}
+
 {% block course_database %}
+<div class="course-front-container">
+    <h1>Welcome to Your Database Course</h1>
+    <div class="playlist">
+      <div class="vid">
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/l1EssrLxt7E" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe> -->
+      </div>
+      <div class="vid">
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Rek0NWPCNOc" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe> -->
+      </div>
+    </div>
+    <div class="playlist">
+      <div class="vid">
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2QR11oDukn4" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe> -->
+      </div>
+      <div class="vid">
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/jRAZlTEZi9I" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe> -->
+      </div>
+    </div>
+    <div class="add-course-btn">
+      <a class="get-started c-b" href="#" onclick="addVideo()">Add Video + </a>
+    </div>
+  </div>
   
+  <script>
+    function addVideo(){
+    let video_src = prompt("Please enter video link which needs to be added")
+    console.log(video_src)
+    }
+  </script>
 {% endblock course_database %}
