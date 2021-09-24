@@ -237,6 +237,16 @@ a, button {
 .user img, .user p {
 	opacity: 1;
 }
+.get-started-a{
+
+	padding: 5px 20px;
+	border-radius: 20px;
+	text-decoration: none;
+	
+	transition: .5s;
+	background-color: #616bf1;
+	color: white;
+}
 /*Common things in all sections*/
  #team_section, #contactus_section {
 	font-family: 'Open Sans', sans-serif;
@@ -375,6 +385,8 @@ padding: 40px;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
+
+
   .courseland-flip-card:hover .courseland-flip-card-inner {
 	transform: rotateY(30deg);
 	/* transform: rotateY(-30deg); if mouse on left side of image*/
