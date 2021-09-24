@@ -65,6 +65,14 @@ nav ul li a:hover {
 }
 
 
+.course-head h1{
+    text-align: center;
+}
+
+.course-head p{
+    text-align: center;
+}
+
 .get-started, button {
 	margin-left: 50px; 
 	padding: 5px 20px;
@@ -457,6 +465,8 @@ padding: 40px;
 	color: white;
 	transform: rotateY(180deg);
   }
+
+
 
   /* Online help */
   .help-flip-card {
